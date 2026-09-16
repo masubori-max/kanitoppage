@@ -797,7 +797,7 @@ body:has(.kani-top) .cps-post-main {
   }
 }
 
-/* 横長ヘッダー画像 */
+/* ヘッダー画像 */
 .kani-top .kani-visually-hidden {
   position: absolute !important;
   width: 1px !important;

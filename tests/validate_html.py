@@ -11,7 +11,7 @@ EXPECTED_MAPPING = {
     "kani-nabe": ["北釧水産", "かに本舗"],
 }
 EXPECTED_IMAGES = {
-    "kani-top-header-wide.png",
+    "kani-top-header-new.png",
     "type-zuwai.webp",
     "type-kegani.webp",
     "type-taraba.webp",

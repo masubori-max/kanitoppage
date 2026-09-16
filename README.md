@@ -23,7 +23,7 @@ python3 -m http.server 8000
 
 ## WordPressへ移すとき
 
-1. HTMLで使用する9画像をWordPressメディアへアップロードします。横長ヘッダーは `kani-top-header-wide.png` です。
+1. HTMLで使用する9画像をWordPressメディアへアップロードします。新しいヘッダーは `kani-top-header-new.png` です。
 2. `wordpress-fixed-page.html` 内の `{{MEDIA_BASE_URL}}` をアップロード先URLに置換します。
 3. HTMLを新規固定ページのコードエディターへ貼り付けます。
 4. `wordpress-additional.css` を追加CSSへ貼り付けます。
