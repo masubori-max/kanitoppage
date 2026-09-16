@@ -1,6 +1,20 @@
-/* トップページタイトル非表示 */
-.home .entry-title {
-  display: none;
+/* カニトップページでWordPressテーマが出力するタイトル領域を非表示 */
+.home .entry-title,
+.home .cps-post-header,
+body:has(.kani-top) .entry-title,
+body:has(.kani-top) .cps-post-header {
+  display: none !important;
+}
+
+/* タイトル領域を消した後の余白も、このページだけ取り除く */
+.home #contents,
+.home .cps-post-box,
+.home .cps-post-main,
+body:has(.kani-top) #contents,
+body:has(.kani-top) .cps-post-box,
+body:has(.kani-top) .cps-post-main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 
@@ -57,22 +71,6 @@
   margin-inline: auto;
 }
 
-.kani-top .kani-skip-link {
-  position: absolute;
-  z-index: 20;
-  top: 8px;
-  left: 8px;
-  padding: 8px 14px;
-  color: var(--kani-white);
-  background: var(--kani-navy-deep);
-  border-radius: 6px;
-  transform: translateY(-160%);
-}
-
-.kani-top .kani-skip-link:focus {
-  transform: translateY(0);
-}
-
 .kani-top .kani-disclosure {
   margin: 0;
   padding: 9px 24px;
@@ -81,74 +79,6 @@
   border-bottom: 1px solid var(--kani-line);
   font-size: 0.78rem;
   text-align: center;
-}
-
-.kani-top .kani-local-nav {
-  background: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(13, 47, 70, 0.1);
-}
-
-.kani-top .kani-local-nav__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 68px;
-  gap: 24px;
-}
-
-.kani-top .kani-local-nav__label {
-  flex: 0 0 auto;
-  margin: 0;
-  color: var(--kani-navy);
-  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-  font-size: 1.06rem;
-  font-weight: 700;
-}
-
-.kani-top .kani-local-nav__label::before {
-  content: "\1F980";
-  margin-right: 8px;
-  color: var(--kani-red);
-  font-family: sans-serif;
-}
-
-.kani-top .kani-local-nav__links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.kani-top .kani-local-nav__links a {
-  position: relative;
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  color: var(--kani-navy);
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.kani-top .kani-local-nav__links a::after {
-  position: absolute;
-  right: 0;
-  bottom: 5px;
-  left: 0;
-  height: 2px;
-  background: var(--kani-red);
-  content: "";
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 180ms ease;
-}
-
-.kani-top .kani-local-nav__links a:hover::after,
-.kani-top .kani-local-nav__links a:focus-visible::after {
-  transform: scaleX(1);
 }
 
 .kani-top .kani-hero {
@@ -726,10 +656,6 @@
     width: min(100% - 40px, 920px);
   }
 
-  .kani-top .kani-local-nav__links {
-    gap: 14px;
-  }
-
   .kani-top .kani-hero__inner {
     min-height: 440px;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -760,34 +686,6 @@
 
   .kani-top .kani-container {
     width: min(100% - 28px, 560px);
-  }
-
-  .kani-top .kani-disclosure {
-    padding-inline: 14px;
-  }
-
-  .kani-top .kani-local-nav {
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-  }
-
-  .kani-top .kani-local-nav__inner {
-    width: max-content;
-    min-width: 100%;
-    min-height: 54px;
-    padding-inline: 14px;
-  }
-
-  .kani-top .kani-local-nav__label {
-    font-size: 0.92rem;
-  }
-
-  .kani-top .kani-local-nav__links {
-    gap: 16px;
-  }
-
-  .kani-top .kani-local-nav__links a {
-    white-space: nowrap;
   }
 
   .kani-top .kani-hero__inner {
@@ -912,7 +810,7 @@
 }
 
 .kani-top .kani-hero.kani-hero--banner {
-  background: #fffdf8 !important;
+  background: transparent !important;
 }
 
 .kani-top .kani-hero--banner::after,
@@ -925,7 +823,7 @@
   display: block !important;
   min-height: 0 !important;
   grid-template-columns: none !important;
-  padding-block: clamp(14px, 2vw, 28px) !important;
+  padding-block: 0 !important;
 }
 
 .kani-top .kani-hero--banner .kani-hero__media,
@@ -948,7 +846,7 @@
 
 @media (max-width: 640px) {
   .kani-top .kani-hero--banner .kani-hero__inner {
-    padding-block: 10px 18px !important;
+    padding-block: 0 !important;
   }
 
   .kani-top .kani-hero--banner .kani-hero__media img {
