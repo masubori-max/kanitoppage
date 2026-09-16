@@ -1,3 +1,9 @@
+/* トップページタイトル非表示 */
+.home .entry-title {
+  display: none;
+}
+
+
 .kani-top {
   --kani-navy: #0d2f46;
   --kani-navy-deep: #082235;
@@ -890,5 +896,62 @@
   .kani-top *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* 横長ヘッダー画像 */
+.kani-top .kani-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.kani-top .kani-hero.kani-hero--banner {
+  background: #fffdf8 !important;
+}
+
+.kani-top .kani-hero--banner::after,
+.kani-top .kani-hero--banner .kani-hero__media::before {
+  display: none !important;
+  content: none !important;
+}
+
+.kani-top .kani-hero--banner .kani-hero__inner {
+  display: block !important;
+  min-height: 0 !important;
+  grid-template-columns: none !important;
+  padding-block: clamp(14px, 2vw, 28px) !important;
+}
+
+.kani-top .kani-hero--banner .kani-hero__media,
+.kani-top .kani-hero--banner .kani-hero__media > a {
+  display: block !important;
+  width: 100% !important;
+}
+
+.kani-top .kani-hero--banner .kani-hero__media img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  border: 1px solid rgba(189, 139, 54, 0.2) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 16px 38px rgba(8, 34, 53, 0.14) !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 640px) {
+  .kani-top .kani-hero--banner .kani-hero__inner {
+    padding-block: 10px 18px !important;
+  }
+
+  .kani-top .kani-hero--banner .kani-hero__media img {
+    border-radius: 8px !important;
   }
 }

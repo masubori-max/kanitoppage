@@ -7,7 +7,7 @@
 - `index.html` — ローカル確認用の完成ページ
 - `wordpress-fixed-page.html` — WordPress本文へ貼り付けるHTML断片
 - `wordpress-additional.css` — `.kani-top` 配下だけに効く追加CSS
-- `assets/images/` — 生成・最適化済みWebP画像9点
+- `assets/images/` — 横長ヘッダーPNGとカニ画像WebP
 - `tests/validate_html.py` — カテゴリ、通販会社、広告属性、画像を検証
 - `IMAGE-PROMPTS.md` — 画像生成に使用した最終プロンプト
 
@@ -23,7 +23,7 @@ python3 -m http.server 8000
 
 ## WordPressへ移すとき
 
-1. `assets/images/` の9画像をWordPressメディアへアップロードします。
+1. HTMLで使用する9画像をWordPressメディアへアップロードします。横長ヘッダーは `kani-top-header-wide.png` です。
 2. `wordpress-fixed-page.html` 内の `{{MEDIA_BASE_URL}}` をアップロード先URLに置換します。
 3. HTMLを新規固定ページのコードエディターへ貼り付けます。
 4. `wordpress-additional.css` を追加CSSへ貼り付けます。
