@@ -72,12 +72,13 @@ body:has(.kani-top) .cps-post-main {
 }
 
 .kani-top .kani-disclosure {
-  margin: 0;
-  padding: 9px 24px;
+  margin: 0 !important;
+  padding: 2px 16px !important;
   color: #40515b;
   background: #f5eee2;
   border-bottom: 1px solid var(--kani-line);
   font-size: 0.78rem;
+  line-height: 1.3 !important;
   text-align: center;
 }
 
@@ -262,6 +263,15 @@ body:has(.kani-top) .cps-post-main {
   margin: -20px auto 36px;
   color: var(--kani-muted);
   text-align: center;
+}
+
+/* 「カニの種類から選ぶ」見出しブロックの上下余白を半分にする */
+.kani-top #kani-types {
+  padding-top: 40px;
+}
+
+.kani-top #kani-types .kani-section-intro {
+  margin-bottom: 18px;
 }
 
 .kani-top .kani-type-grid,
@@ -667,6 +677,10 @@ body:has(.kani-top) .cps-post-main {
     padding-block: 56px;
   }
 
+  .kani-top #kani-types {
+    padding-top: 28px;
+  }
+
   .kani-top .kani-type-grid,
   .kani-top .kani-purpose-grid,
   .kani-top .kani-guide-grid {
@@ -730,6 +744,10 @@ body:has(.kani-top) .cps-post-main {
 
   .kani-top .kani-section {
     padding-block: 40px;
+  }
+
+  .kani-top #kani-types {
+    padding-top: 20px;
   }
 
   .kani-top .kani-section-heading {
@@ -811,6 +829,8 @@ body:has(.kani-top) .cps-post-main {
 
 .kani-top .kani-hero.kani-hero--banner {
   background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .kani-top .kani-hero--banner::after,
@@ -823,6 +843,7 @@ body:has(.kani-top) .cps-post-main {
   display: block !important;
   min-height: 0 !important;
   grid-template-columns: none !important;
+  margin-block: 0 !important;
   padding-block: 0 !important;
 }
 
@@ -830,6 +851,9 @@ body:has(.kani-top) .cps-post-main {
 .kani-top .kani-hero--banner .kani-hero__media > a {
   display: block !important;
   width: 100% !important;
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+  line-height: 0 !important;
 }
 
 .kani-top .kani-hero--banner .kani-hero__media img {
@@ -837,6 +861,8 @@ body:has(.kani-top) .cps-post-main {
   width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
   aspect-ratio: auto !important;
   border: 1px solid rgba(189, 139, 54, 0.2) !important;
   border-radius: 14px !important;
