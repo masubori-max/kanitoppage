@@ -360,11 +360,14 @@ body:has(.kani-top) .cps-post-main {
 
 /* WordPressテーマによる縦長化を抑え、画像2のコンパクトなカードへ揃える */
 .kani-top #kani-types .kani-type-grid {
-  align-items: stretch;
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: start !important;
+  grid-auto-rows: max-content !important;
 }
 
 .kani-top #kani-types .kani-type-card {
-  align-self: stretch;
+  align-self: start !important;
   height: auto !important;
   min-height: 0 !important;
   margin: 0 !important;
@@ -372,25 +375,57 @@ body:has(.kani-top) .cps-post-main {
 }
 
 .kani-top #kani-types .kani-type-card > a {
-  height: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* WordPressの自動整形で挿入される空行・空段落をカード高から除外する */
+.kani-top #kani-types .kani-type-card > a > br,
+.kani-top #kani-types .kani-type-card > a > p:empty,
+.kani-top #kani-types .kani-type-card > p {
+  display: none !important;
+  height: 0 !important;
   min-height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .kani-top #kani-types .kani-type-card__body {
-  min-height: 0 !important;
+  height: auto !important;
+  min-height: 250px !important;
+  flex: 0 0 auto !important;
   padding: 18px 16px 16px !important;
+}
+
+.kani-top #kani-types .kani-type-card h3 {
+  margin: 0 0 7px !important;
+  padding: 0 !important;
+  color: var(--kani-navy) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  text-align: center !important;
 }
 
 .kani-top #kani-types .kani-type-card p {
   margin-bottom: 16px !important;
 }
 
+/* CTAを包むWordPress生成段落をレイアウト要素として扱わない */
+.kani-top #kani-types .kani-type-card__body > p:last-child {
+  display: contents !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .kani-top #kani-types .kani-type-card__cta {
   width: auto !important;
   min-height: 42px;
   align-self: center;
+  margin-top: auto !important;
   padding-inline: 14px;
 }
 
@@ -809,6 +844,10 @@ body:has(.kani-top) .cps-post-main {
 
   .kani-top .kani-type-card__body {
     padding: 18px 16px 16px;
+  }
+
+  .kani-top #kani-types .kani-type-card__body {
+    min-height: 0 !important;
   }
 
   .kani-top .kani-purpose-card__body {
