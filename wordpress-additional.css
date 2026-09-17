@@ -358,6 +358,42 @@ body:has(.kani-top) .cps-post-main {
   line-height: 1;
 }
 
+/* WordPressテーマによる縦長化を抑え、画像2のコンパクトなカードへ揃える */
+.kani-top #kani-types .kani-type-grid {
+  align-items: stretch;
+}
+
+.kani-top #kani-types .kani-type-card {
+  align-self: stretch;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 12px 0 0 !important;
+}
+
+.kani-top #kani-types .kani-type-card > a {
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.kani-top #kani-types .kani-type-card__body {
+  min-height: 0 !important;
+  padding: 18px 16px 16px !important;
+}
+
+.kani-top #kani-types .kani-type-card p {
+  margin-bottom: 16px !important;
+}
+
+.kani-top #kani-types .kani-type-card__cta {
+  width: auto !important;
+  min-height: 42px;
+  align-self: center;
+  padding-inline: 14px;
+}
+
 .kani-top .kani-purpose-card__body {
   display: flex;
   min-height: 64px;
