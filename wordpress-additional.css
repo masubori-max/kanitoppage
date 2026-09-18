@@ -274,6 +274,11 @@ body:has(.kani-top) .cps-post-main {
   margin-bottom: 18px;
 }
 
+/* 目的別見出しを「カニの種類」4枚カードのすぐ下に配置する */
+.kani-top #kani-types .kani-purpose-heading {
+  margin: 44px 0 0 !important;
+}
+
 .kani-top .kani-type-grid,
 .kani-top .kani-purpose-grid {
   display: grid;
@@ -752,6 +757,10 @@ body:has(.kani-top) .cps-post-main {
     padding-top: 28px;
   }
 
+  .kani-top #kani-types .kani-purpose-heading {
+    margin-top: 36px !important;
+  }
+
   .kani-top .kani-type-grid,
   .kani-top .kani-purpose-grid,
   .kani-top .kani-guide-grid {
@@ -819,6 +828,10 @@ body:has(.kani-top) .cps-post-main {
 
   .kani-top #kani-types {
     padding-top: 20px;
+  }
+
+  .kani-top #kani-types .kani-purpose-heading {
+    margin-top: 28px !important;
   }
 
   .kani-top .kani-section-heading {
