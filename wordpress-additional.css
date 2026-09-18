@@ -232,6 +232,11 @@ body:has(.kani-top) .cps-post-main {
   background: var(--kani-white);
 }
 
+/* 「家族で楽しむ」から始まる4枚カードの周囲だけをクリーム色にする */
+.kani-top .kani-section[aria-labelledby="kani-purpose-title"] {
+  background-color: var(--kani-cream);
+}
+
 .kani-top .kani-section--soft {
   background: #f6efe4;
 }
