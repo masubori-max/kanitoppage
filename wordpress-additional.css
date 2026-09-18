@@ -742,6 +742,25 @@ body:has(.kani-top) .cps-post-main {
   border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 
+/* PC表示で目的別4カードと「種類別おすすめ通販」の間隔だけを狭める */
+@media (min-width: 1024px) {
+  .kani-top .kani-section[aria-labelledby="kani-purpose-title"] {
+    padding-bottom: 32px;
+  }
+
+  .kani-top .kani-section[aria-labelledby="kani-purpose-title"] > .kani-container > p:last-child {
+    display: none !important;
+  }
+
+  .kani-top .kani-section[aria-labelledby="kani-shops-title"] {
+    padding-top: 32px;
+  }
+
+  .kani-top #kani-shops-title {
+    margin-top: 0 !important;
+  }
+}
+
 @media (max-width: 1023px) {
   .kani-top .kani-container {
     width: min(100% - 40px, 920px);
@@ -829,6 +848,23 @@ body:has(.kani-top) .cps-post-main {
 
   .kani-top .kani-section {
     padding-block: 40px;
+  }
+
+  /* スマホ表示で目的別4カードと「種類別おすすめ通販」の間隔だけを狭める */
+  .kani-top .kani-section[aria-labelledby="kani-purpose-title"] {
+    padding-bottom: 32px;
+  }
+
+  .kani-top .kani-section[aria-labelledby="kani-purpose-title"] > .kani-container > p:last-child {
+    display: none !important;
+  }
+
+  .kani-top .kani-section[aria-labelledby="kani-shops-title"] {
+    padding-top: 32px;
+  }
+
+  .kani-top #kani-shops-title {
+    margin-top: 0 !important;
   }
 
   .kani-top #kani-types {
