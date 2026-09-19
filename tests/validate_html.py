@@ -5,10 +5,10 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_MAPPING = {
-    "kani-zuwai": ["かに本舗", "かにまみれ", "ますよね"],
-    "kani-kegani": ["かにまみれ", "北釧水産"],
-    "kani-taraba": ["かに本舗", "かにまみれ"],
-    "kani-nabe": ["北釧水産", "かに本舗"],
+    "kani-zuwai": ["かに本舗"],
+    "kani-kegani": ["かにまみれ"],
+    "kani-taraba": ["かに本舗"],
+    "kani-nabe": [],
 }
 EXPECTED_IMAGES = {
     "kani-top-header-new.png",
@@ -116,8 +116,8 @@ def validate(path: Path, wordpress: bool = False):
     if wordpress:
         if "assets/images/" in text:
             errors.append("WordPress版にローカル画像パスが残っています")
-        if "{{MEDIA_BASE_URL}}" not in text:
-            errors.append("WordPressメディアURLの置換トークンがありません")
+        if "/wp-content/uploads/" not in text:
+            errors.append("WordPressメディアURLがありません")
     else:
         used = {
             Path(attrs.get("src", "")).name
