@@ -284,6 +284,10 @@ body:has(.kani-top) .cps-post-main {
   margin: 44px 0 0 !important;
 }
 
+.kani-top #kani-types .kani-purpose-heading + .kani-section-intro {
+  margin-top: 28px;
+}
+
 .kani-top .kani-type-grid,
 .kani-top .kani-purpose-grid {
   display: grid;
