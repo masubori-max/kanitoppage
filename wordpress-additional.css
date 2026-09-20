@@ -286,6 +286,7 @@ body:has(.kani-top) .cps-post-main {
 
 .kani-top #kani-types .kani-purpose-heading + .kani-section-intro {
   margin-top: 28px;
+  margin-bottom: 12px;
 }
 
 .kani-top .kani-type-grid,
@@ -753,7 +754,7 @@ body:has(.kani-top) .cps-post-main {
   }
 
   .kani-top #kani-types + .kani-section[aria-labelledby="kani-purpose-title"] {
-    padding-top: 12px;
+    padding-top: 0;
   }
 
   .kani-top .kani-section[aria-labelledby="kani-purpose-title"] {
@@ -863,11 +864,15 @@ body:has(.kani-top) .cps-post-main {
   }
 
   .kani-top #kani-types {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+
+  .kani-top #kani-types .kani-purpose-heading + .kani-section-intro {
+    margin-bottom: 12px !important;
   }
 
   .kani-top #kani-types + .kani-section[aria-labelledby="kani-purpose-title"] {
-    padding-top: 12px;
+    padding-top: 0 !important;
   }
 
   /* スマホ表示で目的別4カードと「種類別おすすめ通販」の間隔だけを狭める */
