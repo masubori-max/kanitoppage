@@ -1176,3 +1176,11 @@ body:has(.kani-top) .cps-post-main {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.kani-top .kani-section[aria-labelledby="kani-purpose-title"] {
+  padding-bottom: 0 !important;
+}
+
+.kani-top .kani-section[aria-labelledby="kani-purpose-title"] + .kani-compact-choices {
+  padding-top: 12px !important;
+}
